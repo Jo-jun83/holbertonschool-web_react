@@ -58,9 +58,11 @@ const executeWork = (employee: Director | Teacher) => {
 
 type Subjects = 'Math' | 'History';
 
-const teachClass = (todayClass: Subjects) => {
-    if (todayClass === "Math")
-        return ("Teaching Math");
-    else 
-        return ("Teaching History");
+export function teachClass(todayClass:Subjects): string {
+    if (todayClass === 'Math') {
+      return 'Teaching Math';
+    } else if (todayClass === 'History') {
+      return 'Teaching History';
+    }
+    return 'Subject not recognized';
 }
